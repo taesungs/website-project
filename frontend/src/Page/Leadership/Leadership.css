@@ -1,0 +1,200 @@
+.leadership {
+    background: white;
+    color: #1f2937;
+    padding: 120px 0;
+    min-height: 100vh;
+}
+
+.leadership-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.leadership-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.leadership-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 16px;
+}
+
+.leadership-subtitle {
+    font-size: 1.25rem;
+    color: #4b5563;
+}
+
+/* CEO 섹션 */
+.ceo-section {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-bottom: 96px;
+    align-items: center;
+}
+
+.ceo-text {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.ceo-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #1f2937;
+}
+
+.ceo-message {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #6b7280;
+}
+
+.ceo-signoff {
+    font-weight: 600;
+    margin-top: 32px;
+    color: #1f2937;
+}
+
+.ceo-image-wrapper {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.ceo-image-wrapper img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.ceo-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.ceo-position {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+/* 경영진 & 핵심 구성원 공통 grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 96px;
+    text-align: center;
+}
+
+.team-grid h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-align: center;
+    color: #1f2937;
+    grid-column: 1 / -1;
+}
+
+/* 카드 */
+.member-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 1px solid #f3f4f6;
+    transition: box-shadow 0.3s;
+}
+
+.member-card:hover {
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.member-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    background: #e5e7eb;
+}
+
+.member-card .card-body {
+    padding: 24px;
+}
+
+.member-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.member-role {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.member-description {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* footer 링크 */
+.leadership-footer-link {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.leadership-footer-link a {
+    display: inline-block;
+    padding: 12px 40px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    background: #2563eb;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(37,99,235,0.3);
+    transition: box-shadow 0.3s, background 0.3s;
+}
+
+.leadership-footer-link a:hover {
+    background: #1d4ed8;
+    box-shadow: 0 15px 30px rgba(37,99,235,0.4);
+}
+
+/* 반응형 */
+@media (min-width: 768px) {
+    .ceo-section {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .ceo-text {
+        text-align: left;
+    }
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

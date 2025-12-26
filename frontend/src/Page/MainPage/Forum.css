@@ -1,0 +1,145 @@
+/* 전체 섹션 */
+.forum {
+    background-color: #ffffff;
+}
+
+/* 컨테이너 */
+.forum-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 112px 16px 64px;
+}
+
+/* 헤더 */
+.forum-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.forum-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* 액션 영역 */
+.forum-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+
+.forum-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    color: #111827;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.forum-more:hover {
+    background-color: #f3f4f6;
+}
+
+/* 리스트 박스 */
+.forum-list {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 빈 상태 */
+.forum-empty {
+    padding: 24px;
+    text-align: center;
+    color: #6b7280;
+}
+
+/* 게시글 아이템 */
+.forum-item {
+    border-bottom: 1px solid #f3f4f6;
+    transition: background-color 0.3s;
+}
+
+.forum-item:last-child {
+    border-bottom: none;
+}
+
+.forum-item:hover {
+    background-color: #eff6ff;
+}
+
+.forum-item-inner {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 정보 */
+.forum-info {
+    flex: 1;
+}
+
+.forum-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.forum-item-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.forum-item:hover .forum-item-title {
+    color: #2563eb;
+}
+
+.forum-date {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* 화살표 */
+.forum-arrow {
+    margin-left: 16px;
+    color: #2563eb;
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.arrow-icon.large {
+    width: 24px;
+    height: 24px;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .forum-container {
+        padding-top: 96px;
+    }
+
+    .forum-title {
+        font-size: 2rem;
+    }
+
+    .forum-meta {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}

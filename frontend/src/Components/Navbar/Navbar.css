@@ -1,0 +1,116 @@
+/* 전체 네비게이션 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  color: black;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 로고 */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 메뉴 */
+.menu {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.menu-item a:hover {
+  color: #2563eb;
+}
+
+/* 언어 선택 */
+.language-select {
+  padding: 4px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+
+.language-select:hover {
+  border-color: #2563eb;
+}
+
+/* 햄버거 버튼 */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 모바일 메뉴 */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 260px;
+  background: white;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 100;
+  padding: 16px;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.close-btn {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .desktop-menu,
+  .desktop-only {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

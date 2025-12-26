@@ -1,0 +1,169 @@
+/* 전체 섹션 */
+.hero {
+    min-height: 110vh;
+    background: linear-gradient(to bottom, #f9fafb, #ffffff);
+    padding-bottom: 0;
+}
+
+/* 내부 컨테이너 */
+.hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 112px 16px 48px;
+}
+
+/* 메인 콘텐츠 */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: center;
+}
+
+/* 제목 */
+.hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.hero-highlight {
+    display: block;
+    margin-top: 16px;
+    color: #2563eb;
+}
+
+/* 설명 */
+.hero-description {
+    font-size: 1.125rem;
+    color: #1f2937;
+    margin-bottom: 32px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 버튼 */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn-primary {
+    padding: 16px 32px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+}
+
+.btn-secondary {
+    padding: 16px 32px;
+    background-color: white;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #eff6ff;
+}
+
+/* 이미지 */
+.hero-image-wrapper {
+    flex: 1;
+    width: 100%;
+    max-width: 720px;
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+/* 통계 */
+.hero-stats {
+    max-width: 900px;
+    margin: 48px auto 36px;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    text-align: center;
+}
+
+.hero-stat-number {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.hero-stat-label {
+    color: #111827;
+}
+
+/* 반응형 */
+@media (min-width: 1024px) {
+    .hero-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
+
+    .hero-description {
+        margin-left: 0;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
